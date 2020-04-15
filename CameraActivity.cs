@@ -5,7 +5,7 @@ using Android.Support.V7.App;
 namespace Camera2Basic
 {
 	[Activity (Label = "Camera2Basic", MainLauncher = true, Icon = "@drawable/icon")]
-	public class CameraActivity : AppCompatActivity
+	public class CameraActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
