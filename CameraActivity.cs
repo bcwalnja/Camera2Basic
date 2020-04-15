@@ -1,0 +1,23 @@
+﻿using Android.App;
+using Android.OS;
+using Android.Support.V7.App;
+
+namespace Camera2Basic
+{
+	[Activity (Label = "Camera2Basic", MainLauncher = true, Icon = "@drawable/icon")]
+	public class CameraActivity : AppCompatActivity
+	{
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreate (bundle);
+			ActionBar.Hide ();
+			SetContentView (Resource.Layout.activity_camera);
+
+			if (bundle == null) {
+				FragmentManager.BeginTransaction ().Replace (Resource.Id.container, Camera2BasicFragment.NewInstance ()).Commit ();
+			}
+		}
+	}
+}
+
+
